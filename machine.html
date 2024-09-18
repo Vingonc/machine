@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convesor Númericos</title>
+
+    <link rel="stylesheet" href="machine.css">
 </head>
 <body>
     <header>
         <h1>Conversor</h1> 
 
-        <button onclick="baseDecimal()">Decimal</button>
-        <button onclick="baseBinario()">Binário</button>
-        <button onclick="baseOctal()">Octal</button>
-        <button onclick="baseHexadecimal()">Hexadecimal</button>
+        <button onclick="descobrirBase(10)">Decimal</button>
+        <button onclick="descobrirBase(2)">Binário</button>
+        <button onclick="descobrirBase(8)">Octal</button>
+        <button onclick="descobrirBase(16)">Hexadecimal</button>
 
     </header>
 
@@ -21,19 +23,23 @@
 
         <hr>
 
-        <h4 id="conversao">Decimal para Binário</h4>
+        <h4 id="conversao">Decimal para:</h4>
 
-        <button id="converterDecimal" onclick="converterDecimal()">Decimal</button>
-        <button id="converterBinario" onclick="converterBinario()">Binário</button>
-        <button id="converterOctal" onclick="converterOctal()">Octal</button>
-        <button id="converterHexadecimal" onclick="converterHexadecimal()">Hexadecimal</button>
+        <button id="converterDecimal" onclick="descobrirBaseConversao(10)">Decimal</button>
+        <button id="converterBinario" onclick="descobrirBaseConversao(2)">Binário</button>
+        <button id="converterOctal" onclick="descobrirBaseConversao(8)">Octal</button>
+        <button id="converterHexadecimal" onclick="descobrirBaseConversao(16)">Hexadecimal</button>
         
         <input type="text" id="input_valor">
+
+        <div id="button_calcular">
+            <button id="calcular" onclick="calcular()">Calcular</button>
+        </div>
 
         <p>Resultado:</p>
         <div id="resultado"></div>
 
-        <button onclick="calcular()">Calcular</button>
+        
 
     </main>
 
@@ -44,3 +50,5 @@
     </footer>
 </body>
 </html>
+
+<script src="./machine.js"></script>
